@@ -5,7 +5,7 @@ class ApplicationController
 
   def awakeFromNib
     RackURLProtocol.register("rack", withRackApplication: self)
-    webView.setMainFrameURL("rack:///")
+    webView.mainFrameURL = "rack:///"
   end
 
   def call(env)

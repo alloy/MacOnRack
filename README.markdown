@@ -14,7 +14,7 @@ A sample MacRuby application demonstrating how to connect Rack to a WebView.
         RackURLProtocol.register("rack", withRackApplication: self)
 
         # Load the root "/" page
-        webView.setMainFrameURL("rack:///")
+        webView.mainFrameURL = "rack:///"
       end
 
       def call(env)
